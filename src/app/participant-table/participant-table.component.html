@@ -1,0 +1,33 @@
+<div class="mat-elevation-z8">
+    <table mat-table class="full-width-table" matSort aria-label="Elements">
+      <!-- Id Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+        <td mat-cell *matCellDef="let row">{{row.position}}</td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="IndividualSports">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Individual Sports</th>
+        <td mat-cell *matCellDef="let row">{{row.Individual}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="DualSports">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Dual Sports</th>
+        <td mat-cell *matCellDef="let row">{{row.Dual}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="TeamSports">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Team Sports</th>
+        <td mat-cell *matCellDef="let row">{{row.Team}}</td>
+      </ng-container>
+  
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    
+  </div>
+  
